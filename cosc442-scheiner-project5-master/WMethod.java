@@ -25,7 +25,6 @@ import java.util.*;
 
  */
 
-
 public class WMethod{
   
   private static String debugMode1="";  // No debugging.
