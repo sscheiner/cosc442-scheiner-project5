@@ -335,8 +335,8 @@ public class WMethod{
     int repeatedEntries=0; // Some test cases might be repeated during the set multiplication process. 
     for(int i = 0; i < pVector.size(); i++){
       for(int j = 0; j < wVector.size(); j++){
-        String pValue = (String) pVector.get(i);
-        String wValue = (String) wVector.get(j);
+        String pValue = (String) pVector.get(i) + " ";
+        String wValue = (String) wVector.get(j) + " ";
         String testCase = pValue + wValue;
         if(!existsInVector(testCase, testCases)){ 
           testCases.add(testCase); 
@@ -400,6 +400,8 @@ public class WMethod{
 	   
 	   for(String test : tests) {
 		   
+		   //generateAssertionFromTest(test);
+		   
 		   System.out.println("public void testCase" + i + "(){"
 		   		+ "\n"
 		   		+ ""
@@ -411,8 +413,37 @@ public class WMethod{
 	   
    }
    
+   //this is my best shot at generating correct JUnit assertions from the FSM input, probably doesnt work as intended
+   /*
+   private static String generateAssertionFromTest(String test) {
+	   
+	   string assertion = 
+	   
+		while(test.length() > 0) {   
+			
+			//trim length 1 inputs
+			if(test.startsWith("(") ||
+			   test.startsWith(")") ||
+			   test.startsWith("0") ||
+			   test.startsWith("7") 
+				   ) {
+				   				   
+				   
+			   }
+			   
+			   //trim length 4 inputs
+			else if(test.startsWith("not(") ||
+					test.startsWith("not)") ||
+					test.startsWith("not0") ||
+					test.startsWith("not7") 
+						   )
+		   
+		}
+	   return null;
+   }
+   */
+   
    private static void runTests(Vector<String> tests) {
-	   //TODO: feed String values of the vector indices into  Utilities.runFSM
 	   int stateCounter = 1;
 	   
 	  
