@@ -1,0 +1,56 @@
+Test Generation Using the W-method. V2.0. August 1, 2013
+
+Enter filename: C:\Users\sfsch\eclipse-workspace\cosc442-scheiner-project5-master\BondFSM
+FSM input from:  C:\Users\sfsch\eclipse-workspace\cosc442-scheiner-project5-master\BondFSM
+States: 6
+Edges 11
+Input alphabet:
+(
+)
+0
+7
+not(
+not)
+not0
+not7
+
+Output alphabet:
+no
+yes
+
+From 	 Input/Output 	 To
+1	 not(/no		 1
+1	 (/no		 2
+2	 not0/no		 2
+2	 0/no		 3
+3	 0/no		 4
+3	 not0/no		 1
+4	 not7/no		 1
+4	 7/no		 5
+5	 )/yes		 6
+5	 not)/no		 5
+6	 0/no		 1
+
+Transition cover set (P). 12 entries.
+Empty not( not( not(not0 not(not0 not(not00 not(not00not7 not(not00not7 not(not00not7) not(not00not7)0 not(not00not7not) not(not0not0 
+
+W Set. 5 entries.
+( ) 0 00 not0 
+
+Number of Test Cases :43
+Test cases: [(, ), 0, 00, not((, not(), not(0, not(00, not(not0, not(not0(, not(not0), not(not00, not(not00(, not(not00), not(not000, not(not0000, not(not00not0, not(not00not7(, not(not00not7), not(not00not7)(, not(not00not7)), not(not00not7)0, not(not00not7)0(, not(not00not7)0), not(not00not7)00, not(not00not7)000, not(not00not7)0not0, not(not00not7)not0, not(not00not70, not(not00not700, not(not00not7not)(, not(not00not7not)), not(not00not7not)0, not(not00not7not)00, not(not00not7not)not0, not(not00not7not0, not(not0not0, not(not0not0(, not(not0not0), not(not0not00, not(not0not000, not(not0not0not0, not0]
+
+FSM execution begins. Input: (  Initial state: 1
+Current state: 1
+ Input: ( Next state: 2 Output: no
+
+FSM execution completed. Final state: 2
+Output pattern:no
+
+FSM execution begins. Input: )  Initial state: 2
+Current state: 2
+
+Exception occured. 
+Class:WMethod
+Method: runFSM
+ Invalid token: )
