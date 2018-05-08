@@ -1,0 +1,392 @@
+package project.main;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class JamesBondTest {
+
+	@Test
+	public void testCase0(){
+	assertFalse(JamesBond.bondRegex(" ( "));
+	}
+	@Test
+	public void testCase1(){
+	assertFalse(JamesBond.bondRegex(" ) "));
+	}
+	@Test
+	public void testCase2(){
+	assertFalse(JamesBond.bondRegex(" 007) "));
+	}
+	@Test
+	public void testCase3(){
+	assertFalse(JamesBond.bondRegex(" 07) "));
+	}
+	@Test
+	public void testCase4(){
+	assertFalse(JamesBond.bondRegex(" 7) "));
+	}
+	@Test
+	public void testCase5(){
+	assertFalse(JamesBond.bondRegex("( ( "));
+	}
+	@Test
+	public void testCase6(){
+	assertFalse(JamesBond.bondRegex("( ) "));
+	}
+	@Test
+	public void testCase7(){
+	assertTrue(JamesBond.bondRegex("( 007) "));
+	}
+	@Test
+	public void testCase8(){
+	assertFalse(JamesBond.bondRegex("( 07) "));
+	}
+	@Test
+	public void testCase9(){
+	assertFalse(JamesBond.bondRegex("( 7) "));
+	}
+	@Test
+	public void testCase10(){
+	assertFalse(JamesBond.bondRegex("(( ( "));
+	}
+	@Test
+	public void testCase11(){
+	assertFalse(JamesBond.bondRegex("(( ) "));
+	}
+	@Test
+	public void testCase12(){
+	assertTrue(JamesBond.bondRegex("(( 007) "));
+	}
+	@Test
+	public void testCase13(){
+	assertFalse(JamesBond.bondRegex("(( 07) "));
+	}
+	@Test
+	public void testCase14(){
+	assertFalse(JamesBond.bondRegex("(( 7) "));
+	}
+	@Test
+	public void testCase15(){
+	assertFalse(JamesBond.bondRegex("() ( "));
+	}
+	@Test
+	public void testCase16(){
+	assertFalse(JamesBond.bondRegex("() ) "));
+	}
+	@Test
+	public void testCase17(){
+	assertTrue(JamesBond.bondRegex("() 007) "));
+	}
+	@Test
+	public void testCase18(){
+	assertFalse(JamesBond.bondRegex("() 07) "));
+	}
+	@Test
+	public void testCase19(){
+	assertFalse(JamesBond.bondRegex("() 7) "));
+	}
+	@Test
+	public void testCase20(){
+	assertFalse(JamesBond.bondRegex("(0 ( "));
+	}
+	@Test
+	public void testCase21(){
+	assertFalse(JamesBond.bondRegex("(0 ) "));
+	}
+	@Test
+	public void testCase22(){
+	assertFalse(JamesBond.bondRegex("(0 007) "));
+	}
+	@Test
+	public void testCase23(){
+	assertTrue(JamesBond.bondRegex("(0 07) "));
+	}
+	@Test
+	public void testCase24(){
+	assertFalse(JamesBond.bondRegex("(0 7) "));
+	}
+	@Test
+	public void testCase25(){
+	assertFalse(JamesBond.bondRegex("(0( ( "));
+	}
+	@Test
+	public void testCase26(){
+	assertFalse(JamesBond.bondRegex("(0( ) "));
+	}
+	@Test
+	public void testCase27(){
+	assertFalse(JamesBond.bondRegex("(0( 007) "));
+	}
+	@Test
+	public void testCase28(){
+	assertFalse(JamesBond.bondRegex("(0( 07) "));
+	}
+	@Test
+	public void testCase29(){
+	assertFalse(JamesBond.bondRegex("(0( 7) "));
+	}
+	@Test
+	public void testCase30(){
+	assertFalse(JamesBond.bondRegex("(0) ( "));
+	}
+	@Test
+	public void testCase31(){
+	assertFalse(JamesBond.bondRegex("(0) ) "));
+	}
+	@Test
+	public void testCase32(){
+	assertFalse(JamesBond.bondRegex("(0) 007) "));
+	}
+	@Test
+	public void testCase33(){
+	assertFalse(JamesBond.bondRegex("(0) 07) "));
+	}
+	@Test
+	public void testCase34(){
+	assertFalse(JamesBond.bondRegex("(0) 7) "));
+	}
+	@Test
+	public void testCase35(){
+	assertFalse(JamesBond.bondRegex("(00 ( "));
+	}
+	@Test
+	public void testCase36(){
+	assertFalse(JamesBond.bondRegex("(00 ) "));
+	}
+	@Test
+	public void testCase37(){
+	assertFalse(JamesBond.bondRegex("(00 007) "));
+	}
+	@Test
+	public void testCase38(){
+	assertFalse(JamesBond.bondRegex("(00 07) "));
+	}
+	@Test
+	public void testCase39(){
+	assertTrue(JamesBond.bondRegex("(00 7) "));
+	}
+	@Test
+	public void testCase40(){
+	assertFalse(JamesBond.bondRegex("(00( ( "));
+	}
+	@Test
+	public void testCase41(){
+	assertFalse(JamesBond.bondRegex("(00( ) "));
+	}
+	@Test
+	public void testCase42(){
+	assertFalse(JamesBond.bondRegex("(00( 007) "));
+	}
+	@Test
+	public void testCase43(){
+	assertFalse(JamesBond.bondRegex("(00( 07) "));
+	}
+	@Test
+	public void testCase44(){
+	assertFalse(JamesBond.bondRegex("(00( 7) "));
+	}
+	@Test
+	public void testCase45(){
+	assertFalse(JamesBond.bondRegex("(00) ( "));
+	}
+	@Test
+	public void testCase46(){
+	assertFalse(JamesBond.bondRegex("(00) ) "));
+	}
+	@Test
+	public void testCase47(){
+	assertFalse(JamesBond.bondRegex("(00) 007) "));
+	}
+	@Test
+	public void testCase48(){
+	assertFalse(JamesBond.bondRegex("(00) 07) "));
+	}
+	@Test
+	public void testCase49(){
+	assertFalse(JamesBond.bondRegex("(00) 7) "));
+	}
+	@Test
+	public void testCase50(){
+	assertFalse(JamesBond.bondRegex("(000 ( "));
+	}
+	@Test
+	public void testCase51(){
+	assertFalse(JamesBond.bondRegex("(000 ) "));
+	}
+	@Test
+	public void testCase52(){
+	assertFalse(JamesBond.bondRegex("(000 007) "));
+	}
+	@Test
+	public void testCase53(){
+	assertFalse(JamesBond.bondRegex("(000 07) "));
+	}
+	@Test
+	public void testCase54(){
+	assertFalse(JamesBond.bondRegex("(000 7) "));
+	}
+	@Test
+	public void testCase55(){
+	assertFalse(JamesBond.bondRegex("(001 ( "));
+	}
+	@Test
+	public void testCase56(){
+	assertFalse(JamesBond.bondRegex("(001 ) "));
+	}
+	@Test
+	public void testCase57(){
+	assertFalse(JamesBond.bondRegex("(001 007) "));
+	}
+	@Test
+	public void testCase58(){
+	assertFalse(JamesBond.bondRegex("(001 07) "));
+	}
+	@Test
+	public void testCase59(){
+	assertFalse(JamesBond.bondRegex("(001 7) "));
+	}
+	@Test
+	public void testCase60(){
+	assertFalse(JamesBond.bondRegex("(002 ( "));
+	}
+	@Test
+	public void testCase61(){
+	assertFalse(JamesBond.bondRegex("(002 ) "));
+	}
+	@Test
+	public void testCase62(){
+	assertFalse(JamesBond.bondRegex("(002 007) "));
+	}
+	@Test
+	public void testCase63(){
+	assertFalse(JamesBond.bondRegex("(002 07) "));
+	}
+	@Test
+	public void testCase64(){
+	assertFalse(JamesBond.bondRegex("(002 7) "));
+	}
+	@Test
+	public void testCase65(){
+	assertFalse(JamesBond.bondRegex("(003 ( "));
+	}
+	@Test
+	public void testCase66(){
+	assertFalse(JamesBond.bondRegex("(003 ) "));
+	}
+	@Test
+	public void testCase67(){
+	assertFalse(JamesBond.bondRegex("(003 007) "));
+	}
+	@Test
+	public void testCase68(){
+	assertFalse(JamesBond.bondRegex("(003 07) "));
+	}
+	@Test
+	public void testCase69(){
+	assertFalse(JamesBond.bondRegex("(003 7) "));
+	}
+	@Test
+	public void testCase70(){
+	assertFalse(JamesBond.bondRegex("(004 ( "));
+	}
+	@Test
+	public void testCase71(){
+	assertFalse(JamesBond.bondRegex("(004 ) "));
+	}
+	@Test
+	public void testCase72(){
+	assertFalse(JamesBond.bondRegex("(004 007) "));
+	}
+	@Test
+	public void testCase73(){
+	assertFalse(JamesBond.bondRegex("(004 07) "));
+	}
+	@Test
+	public void testCase74(){
+	assertFalse(JamesBond.bondRegex("(004 7) "));
+	}
+	@Test
+	public void testCase75(){
+	assertFalse(JamesBond.bondRegex("(005 ( "));
+	}
+	@Test
+	public void testCase76(){
+	assertFalse(JamesBond.bondRegex("(005 ) "));
+	}
+	@Test
+	public void testCase77(){
+	assertFalse(JamesBond.bondRegex("(005 007) "));
+	}
+	@Test
+	public void testCase78(){
+	assertFalse(JamesBond.bondRegex("(005 07) "));
+	}
+	@Test
+	public void testCase79(){
+	assertFalse(JamesBond.bondRegex("(005 7) "));
+	}
+	@Test
+	public void testCase80(){
+	assertFalse(JamesBond.bondRegex("(006 ( "));
+	}
+	@Test
+	public void testCase81(){
+	assertFalse(JamesBond.bondRegex("(006 ) "));
+	}
+	@Test
+	public void testCase82(){
+	assertFalse(JamesBond.bondRegex("(006 007) "));
+	}
+	@Test
+	public void testCase83(){
+	assertFalse(JamesBond.bondRegex("(006 07) "));
+	}
+	@Test
+	public void testCase84(){
+	assertFalse(JamesBond.bondRegex("(006 7) "));
+	}
+	@Test
+	public void testCase85(){
+	assertFalse(JamesBond.bondRegex("(007 ( "));
+	}
+	@Test
+	public void testCase86(){
+	assertTrue(JamesBond.bondRegex("(007 ) "));
+	}
+	@Test
+	public void testCase87(){
+	assertTrue(JamesBond.bondRegex("(007 007) "));
+	}
+	@Test
+	public void testCase88(){
+	assertTrue(JamesBond.bondRegex("(007 07) "));
+	}
+	@Test
+	public void testCase89(){
+	assertTrue(JamesBond.bondRegex("(007 7) "));
+	}
+	@Test
+	public void testCase90(){
+	assertFalse(JamesBond.bondRegex("(007( ( "));
+	}
+	@Test
+	public void testCase91(){
+	assertTrue(JamesBond.bondRegex("(007( ) "));
+	}
+	@Test
+	public void testCase92(){
+	assertTrue(JamesBond.bondRegex("(007( 007) "));
+	}
+	@Test
+	public void testCase93(){
+	assertTrue(JamesBond.bondRegex("(007( 07) "));
+	}
+	@Test
+	public void testCase94(){
+	assertTrue(JamesBond.bondRegex("(007( 7) "));
+	}
+
+
+
+}
